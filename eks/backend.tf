@@ -1,5 +1,5 @@
 terraform {
-  required_version = "~> 1.11.1"
+  required_version = "~> 1.12.2"
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -7,7 +7,7 @@ terraform {
     }
   }
   backend "s3" {
-    bucket         = "praduman-eks-s3"
+    bucket         = "vk-eks-s3"
     region         = "ap-south-1"
     key            = "eks/terraform.tfstate"
     dynamodb_table = "Lock-Files"
